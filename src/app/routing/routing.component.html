@@ -1,0 +1,114 @@
+<!--<div class="container-fluid custom-modal-container">
+  <div class="row custom-modal-header">
+      <div class="col-sm-12">
+          <h1>ENTER THE FOLLOWING DETAILS</h1>
+      </div>
+  </div>
+  <div class="row">
+
+    <form [formgroup]="userForm" submit="onSubmit()">
+    
+        <lable for="GalleryName"> Gallery Name</lable>
+        <input type="text" formControlName="GalleryName" id="name" #name="ngControl"[(ngModel)]="name" />
+        
+        <lable for="status"> Scheduled Publishing</lable>
+        <button><select (change)='status(myselect.value)' #myselect type="text"[(ngModel)]="status" name="STATUS" class="dropdownCusom" > 
+            <option *ngFor="let n of names" [attr.value]="n">{{n}}</option>
+          </select></button>
+        
+        <lable for="Stores"> Stores</lable>
+
+
+        <lable for="images"> Images to Load</lable>
+        <input type="text" formControlName="GalleryName" id="name" #name="ngControl"[(ngModel)]="name" />
+        <lable for="GalleryName"> Gallery Name</lable>
+        <input type="text" formControlName="GalleryName" id="name" #name="ngControl"[(ngModel)]="name" />
+        <lable for="GalleryName"> Gallery Name</lable>
+        <input type="text" formControlName="GalleryName" id="name" #name="ngControl"[(ngModel)]="name" />
+
+    <div class="form-group">
+     <label class="control-label ">
+      How would you rate your experience with us?
+     </label>
+     <div>
+      <div class="radio">
+     <label class="radio">
+      <input name="rating" type="radio" value="Bad"/>
+      Bad
+     </label>
+      </div>
+      <div class="radio">
+     <label class="radio">
+      <input name="rating" type="radio" value="Fair"/>
+      Fair
+     </label>
+      </div>
+      <div class="radio">
+     <label class="radio">
+      <input name="rating" type="radio" value="Good"/>
+      Good
+     </label>
+      </div>
+      <div class="radio">
+     <label class="radio">
+      <input name="rating" type="radio" value="Very Good"/>
+      Very Good
+     </label>
+      </div>
+      <div class="radio">
+     <label class="radio">
+      <input name="rating" type="radio" value="Excellent"/>
+      Excellent
+     </label>
+      </div>
+     </div>
+    </div>
+    <div class="form-group">
+     <label class="control-label" for="feedback_bad">
+      We're sorry to hear you had a bad experience.  What went wrong?
+     </label>
+     <textarea class="form-control" cols="40" id="feedback_bad" name="feedback_bad" rows="10"></textarea>
+    </div>
+    <div class="form-group">
+     <label class="control-label" for="feedback_ok">
+      Please tell us what you liked and how we can improve:
+     </label>
+     <textarea class="form-control form-control" cols="40" id="feedback_ok" name="feedback_ok" rows="10"></textarea>
+    </div>
+    <div class="form-group" id="div_testimonial">
+      <div>
+        <label class="control-label " for="testimonial">
+        Wonderful!  We're so glad to hear that.  Would you be willing to write a customer comment for our website?
+        </label>
+        <div>
+        <label class="radio-inline">
+       <input name="testimonial" type="radio" value="yes"/>
+       Sure!
+        </label>
+        <label class="radio-inline">
+       <input name="testimonial" type="radio" value="no"/>
+       I'd rather not.
+        </label>
+        </div>
+      </div>
+    </div>
+    <div class="form-group">
+     <label class="control-label " for="feedback_great">
+      Thank you so much!  Please leave your testimonial here:
+     </label>
+     <textarea class="form-control" cols="40" id="feedback_great" name="feedback_great" rows="10"></textarea>
+    </div>
+    <div class="form-group" id="thanks_anyway">
+     <label class="control-label">
+      No problem, thanks for being a customer!
+     </label>
+    </div>				 
+    <div class="form-group">
+      <button class="btn btn-primary " name="submit" type="submit">
+     Submit
+      </button>
+    </div>
+   </form>	-->
+
+   <p> 
+     This is Routed Successfully</p>

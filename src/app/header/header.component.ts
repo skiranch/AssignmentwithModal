@@ -1,5 +1,6 @@
-import { Component, OnInit,EventEmitter,Output } from '@angular/core';
+import { Component, OnInit,EventEmitter,Output,ViewContainerRef,ViewEncapsulation,ViewChild} from '@angular/core';
 import{ NgFor} from '@angular/common';
+import{ Router,ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -13,14 +14,22 @@ export class HeaderComponent{
   storeName: string = "FILTER BY STORE";
   stores: string[] = ["Conberro", "Eastland", "Grand Central", "Robina","FILTER BY STORE"];
 
+  value:number;
+
  @Output()
  fileterBody:EventEmitter<any>=new EventEmitter<any>();
-
+ 
+ constructor (private router:Router){}
 
   myfilter(myOption:string,myOption2:string)
   {
     this.fileterBody.emit({opt1:myOption,opt2:myOption2});
     
+  }
+
+  OnClick(){
+    this.value=1;
+    this.router.navigate(['/HeaderComponent',{ outlet:{'Edit':[]}}]);
   }
 
 }

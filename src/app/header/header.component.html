@@ -2,7 +2,7 @@
 <div class="panel-heading--padding0">
         <div class="header" >
             <div class="header__text">GALLERY FOR </div>
-            <div class="header__text" style="font-size: 200%;">General Pants Co.</div>
+            <div class="header__text--font">General Pants Co.</div>
             <hr>
            
             <div class="container__header">
@@ -16,9 +16,10 @@
                                         <option *ngFor="let n of stores" [attr.value]="n">{{n}}</option>
                                       </select></button></div>
                                       <div class="col-md-6--margin-left">
-            <button class="button__primary--margin">REORDER</button>&nbsp; &nbsp;&nbsp; &nbsp; <button class="button__primary--bgcolor">CREATE GALLERY</button></div>
-           
+            <button class="button__primary--margin">REORDER</button>&nbsp; &nbsp;&nbsp; &nbsp; <button class="button__primary--bgcolor "><input type="button" (click)="OnClick()">CREATE GALLERY</button></div>
           </div>
         </div>
     </div>
 </div>
+
+

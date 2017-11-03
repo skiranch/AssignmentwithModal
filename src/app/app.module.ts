@@ -1,11 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Modal,BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
+import {RouterModule} from '@angular/router';
+import { ModalModule, OverlayRenderer, DOMOverlayRenderer, Overlay,ModalOverlay } from 'angular2-modal';
+
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BodyComponent } from './body/body.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LeftComponent } from './left/left.component';
 import { FooterComponent } from "./footer/footer.component";
+import { RoutingComponent } from './routing/routing.component';
+
+
+const MODAL_PROVIDERS :any= [
+  Modal,
+  Overlay,
+  { provide: OverlayRenderer, useClass: DOMOverlayRenderer }
+];
 
 @NgModule({
   declarations: [
@@ -14,12 +27,14 @@ import { FooterComponent } from "./footer/footer.component";
     BodyComponent,
     LeftComponent,
     FooterComponent,
+    RoutingComponent,
   ],
   imports: [
-    BrowserModule,FormsModule
+    BrowserModule,FormsModule,BootstrapModalModule,ModalModule, ModalModule.forRoot(),
   ],
-
-  providers: [],
-  bootstrap: [AppComponent]
+ 
+  providers: [MODAL_PROVIDERS],
+  bootstrap: [AppComponent,HeaderComponent,RoutingComponent]
+  
 })
 export class AppModule { }
